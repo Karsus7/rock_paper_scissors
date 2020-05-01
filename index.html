@@ -25,7 +25,7 @@
             // Prompt tells the user how to play the game.
             var playerGuess = prompt("Enter r, p, or s to play!");
             // .toLowerCase insures that capital letters will be accepted as answers. (See 03-Javascript activity 16)
-            playerGuess = userGuess.toLowerCase();
+            playerGuess = playerGuess.toLowerCase();
             // '===' means only this choice, insuring that only r, p, and s are acceptable choices. 
             // Although the .toLowerCase also allows R, P and S to be acceptable.
             if (playerGuess === "r" || playerGuess === "p" || playerGuess === "s") {
