@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors Part 5</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // Array of choices
+        var computerChoices = ["r", "p", "s"];
+
+        // variables for the number of outcomes.
+        var wins = 0;
+        var losses = 0;
+        var ties = 0;
+
+        for (var i = 0; i < 10; i++) {
+            // Random number generator used with computerChoices array. (See 03-Javascript activity 21)
+            // This provides the computers choice of rock, paper or scissors.
+            var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+            // Prompt tells the user how to play the game.
+            var userGuess = prompt("Enter r, p, or s to play!");
+            // .toLowerCase insures that capital letters will be accepted as answers. (See 03-Javascript activity 16)
+            userGuess = userGuess.toLowerCase();
+            // '===' means only this choice, insuring that only r, p, and s are acceptable choices. 
+            // Although the .toLowerCase also allows R, P and S to be acceptable.
+            if (userGuess === "r" || userGuess === "p" || userGuess === "s") {
+
+                alert("The computer chose " + computerGuess);
+                // Logic that determines who wins and loses the random game. (See 03-Javascript activity 14)
+                if ((userGuess === "r" && computerGuess === "s") ||
+                    (userGuess === "s" && computerGuess === "p") ||
+                    (userGuess === "p" && computerGuess === "r")) {
+                    // The code below lets the computer keep track of results and alert the player to the outcomes.
+                    wins++;
+                    alert("You have won " + wins + " time(s).");
+                } else if (userGuess === computerGuess) {
+                    ties++;
+                    alert("You have tied " + ties + " time(s).");
+                } else {
+                    losses++;
+                    alert("You have lost " + losses + " time(s).");
+                }
+            }
+        }
+        // This code could stand to be improved, as it only gives the results of wins, losses, or ties, based on what outcome the player last achieved.
+
+    </script>
+</body>
+
+</html>

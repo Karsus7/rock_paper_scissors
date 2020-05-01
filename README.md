@@ -1,7 +1,5 @@
 ### rock_paper_scissors
 
-* _None_
-
 ### Instructions
 
 * In groups of 4, begin the process of coding out the rock-paper-scissors game.
