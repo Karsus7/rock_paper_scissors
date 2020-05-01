@@ -23,22 +23,22 @@
             var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
             // Prompt tells the user how to play the game.
-            var userGuess = prompt("Enter r, p, or s to play!");
+            var playerGuess = prompt("Enter r, p, or s to play!");
             // .toLowerCase insures that capital letters will be accepted as answers. (See 03-Javascript activity 16)
-            userGuess = userGuess.toLowerCase();
+            playerGuess = userGuess.toLowerCase();
             // '===' means only this choice, insuring that only r, p, and s are acceptable choices. 
             // Although the .toLowerCase also allows R, P and S to be acceptable.
-            if (userGuess === "r" || userGuess === "p" || userGuess === "s") {
+            if (playerGuess === "r" || playerGuess === "p" || playerGuess === "s") {
 
                 alert("The computer chose " + computerGuess);
                 // Logic that determines who wins and loses the random game. (See 03-Javascript activity 14)
-                if ((userGuess === "r" && computerGuess === "s") ||
-                    (userGuess === "s" && computerGuess === "p") ||
-                    (userGuess === "p" && computerGuess === "r")) {
+                if ((playerGuess === "r" && computerGuess === "s") ||
+                    (playerGuess === "s" && computerGuess === "p") ||
+                    (playerGuess === "p" && computerGuess === "r")) {
                     // The code below lets the computer keep track of results and alert the player to the outcomes.
                     wins++;
                     alert("You have won " + wins + " time(s).");
-                } else if (userGuess === computerGuess) {
+                } else if (playerGuess === computerGuess) {
                     ties++;
                     alert("You have tied " + ties + " time(s).");
                 } else {
